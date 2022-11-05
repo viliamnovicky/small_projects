@@ -1,0 +1,45 @@
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(1, 1, 1, .1);
+
+    &__1 {
+        animation: circle_1 10s infinite;
+        width: 50rem;
+        height: 50rem;
+    }
+    
+    &__2 {
+        animation: circle_2 10s infinite;
+        width: 35rem;
+        height: 35rem;
+    }
+    
+    &__3 {
+        animation: circle_3 10s infinite;
+        width: 25rem;
+        height: 25rem;
+    }
+    
+    &__4 {
+        animation: circle_4 10s infinite;
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    &__5 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        animation: circle_5 10s infinite;
+        width: 17rem;
+        height: 17rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+}

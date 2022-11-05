@@ -1,0 +1,142 @@
+.flip-card {
+  width: 32rem;
+  height: 50rem;
+  perspective: 1000px;
+  margin: auto;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: rgba(43, 43, 43, .2) 0 .5rem 1rem;
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__front {
+
+    p {
+      text-align: left;
+      font-size: 1.6rem;
+      line-height: 4rem;
+      width: 80%;
+      margin: auto;
+      text-align: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+      }
+    }
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    height: 24rem;
+    clip-path: polygon(0% 90%, 100% 100%, 100% 0, 0 0);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    &--back {
+      height: 52%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      clip-path: polygon(0% 100%, 100% 100%, 100% 10%, 0 0);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    h1 {
+      background: rgba(#fff, .5);
+      width: 70%;
+      padding: 2.4rem 0;
+      clip-path: polygon(0% 81%, 100% 100%, 100% 19%, 0 0);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__btn {
+    border: none;
+    text-decoration: none;
+    background: rgb(44, 35, 15);
+    width: 60%;
+    height: 8rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .5rem;
+    z-index: 1000;
+
+    &:hover {
+      background: #fff;
+      color: rgb(44, 35, 15);
+      font-size: 2rem;
+    }
+
+    &:hover + .flip-card__img--back {
+      height: 100%;
+      clip-path: polygon(0% 100%, 100% 100%, 100% 0, 0 0);
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  &:hover &__inner {
+    transform: rotateY(180deg);
+    box-shadow: rgba(43, 43, 43, .1) 0 1rem 1rem;
+  }
+}
+
+.iceland {
+  background: url(../img/iceland.jpg) no-repeat center center/cover;
+}
+
+.slovenia {
+  background: url(../img/slovenia.jpg) no-repeat center center/cover;
+}
+
+.austria {
+  background: url(../img/austria.jpg) no-repeat center center/cover;
+}
+
+.iceland__back {
+  background: url(../img/iceland_back.jpg) no-repeat center center/cover;
+}
+
+.slovenia__back {
+  background: url(../img/slovenia_back.jpg) no-repeat center center/cover;
+}
+
+.austria__back {
+  background: url(../img/austria_back.jpg) no-repeat center center/cover;
+}

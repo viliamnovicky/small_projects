@@ -1,0 +1,13 @@
+.uppercase {
+    text-transform: uppercase;
+}
+
+.header {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+
+    &__big {
+        font-size: 5rem;
+    }
+}

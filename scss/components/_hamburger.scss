@@ -1,0 +1,111 @@
+.hamburger {
+
+    position: relative;
+
+    &__checkbox {
+        visibility: hidden;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        border-radius: 1rem;
+        width: 5rem;
+        height: 5rem;
+        cursor: pointer;
+        transition-delay: .5s;
+    }
+
+    &__part {
+        display: block;
+        width: 85%;
+        height: 5px;
+        background: white;
+        border-radius: 10rem;
+        position: absolute;
+        backface-visibility: hidden;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+        transition: all .5s;
+
+        &--top {
+            left: 50%;
+            top: 25%;
+        }
+
+        &--middle {
+            top: 50%;
+            left: 50%;
+            background: #aa9eff;
+        }
+
+        &--bottom {
+            left: 50%;
+            bottom: 25%;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    &__links {
+        list-style-type: none;
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        transform: translate(-50%, -50%); 
+        width: 0%;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__link {
+        text-align: center;
+        display: block;
+        width: 90%;
+        text-decoration: none;
+        font-size: 3.2rem;
+        opacity: 0;
+        color: white;
+        font-family: "open-sans", sans-serif;
+        background: linear-gradient(75deg, rgba(#1bb1b5, .1) 0%, rgba(#1bb1b5, .1) 40%, rgba(#1f3c6a, .2) 50%, rgba(#1f3c6a, .3) 100%);
+        margin-bottom: 1.6rem;
+        padding: 1.6rem 3.2rem;
+        margin: 1.6rem auto;
+        border-radius: 1.6rem;
+        background-size: 300%;
+
+        &:hover {
+            background-position: 80%;
+        }
+    }
+
+    &__checkbox:checked + &__btn {
+        transform: rotate(180deg);
+    }
+
+    &__checkbox:checked + &__btn &__part--top {
+        transform: translate(-50%, -50%) rotate(45deg);
+        margin-top: 25%;
+    }
+
+    &__checkbox:checked + &__btn &__part--middle {
+        width: 0;
+        left: 10%;
+    }
+
+    &__checkbox:checked + &__btn &__part--bottom {
+        transform: translate(-50%, 50%) rotate(-45deg);
+        margin-bottom: 25%;
+    }
+
+    &__checkbox:checked ~ &__links{
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+        left: 50%;
+    }
+
+    &__checkbox:checked ~ &__links &__link{
+        opacity: 1;
+    }
+}

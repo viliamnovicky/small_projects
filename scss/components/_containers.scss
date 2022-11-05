@@ -1,0 +1,29 @@
+.cont {
+  background: grey;
+  border-radius: 3rem;
+  width: 30vw;
+  height: 30vw;
+  display: flex;
+
+  &__1 {
+    background: linear-gradient(45deg, #1bb1b5, #1f3c6a);
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__2 {
+    background: linear-gradient(0, #aa9eff, #ff94c1, #ff80cd);
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__3 {
+    background: rgb(36, 33, 33);
+    overflow: hidden;
+    
+  }
+
+  &__4 {
+    background: radial-gradient(rgb(54, 54, 54) 10%, rgb(255, 68, 0));
+  }
+}

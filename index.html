@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.cdnfonts.com/css/benguiat" rel="stylesheet">
+                
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="flex flex__three margin__top margin__bottom">
+      <div class="cont cont__1">
+        <div class="circle circle__1"></div>
+        <div class="circle circle__2"></div>
+        <div class="circle circle__3"></div>
+        <div class="circle circle__4"></div>
+        <div class="circle circle__5">loading</div>
+      </div>
+      <div class="cont cont__2 hamburger">
+        <input type="checkbox" class="hamburger__checkbox" id="hamburger" />
+        <label for="hamburger" class="hamburger__btn">
+          <span class="hamburger__part hamburger__part--top"></span>
+          <span class="hamburger__part hamburger__part--middle"></span>
+          <span class="hamburger__part hamburger__part--bottom"></span>
+        </label>
+        <li class="hamburger__links">
+          <a class="hamburger__link" href="#">about</a>
+          <a class="hamburger__link" href="#">products</a>
+          <a class="hamburger__link" href="#">clients</a>
+          <a class="hamburger__link" href="#">contact</a>
+        </li>
+      </div>
+      <div class="cont cont__3">
+        <div class="navbar navbar__dropdown flex">
+          <button class = "navbar__dropdown--btn">smartphones <span>🔻</span> 
+            <li class="navbar__dropdown--list smartphones">
+                <a href="" class="navbar__dropdown--link">android</a>
+                <a href="" class="navbar__dropdown--link">ios</a>
+                <a href="" class="navbar__dropdown--link">windows</a>
+                <a href="" class="navbar__dropdown--link">accesories</a>
+            </li>
+          </button>
+          <button class = "navbar__dropdown--btn">notebooks <span>🔻</span>
+            <li class="navbar__dropdown--list notebooks">
+              <a href="" class="navbar__dropdown--link">ios</a>
+              <a href="" class="navbar__dropdown--link">windows</a>
+              <a href="" class="navbar__dropdown--link">linux</a>
+              <a href="" class="navbar__dropdown--link">accesories</a>
+          </li>
+          </button>
+          <button class = "navbar__dropdown--btn">cameras <span>🔻</span>
+            <li class="navbar__dropdown--list cameras">
+              <a href="" class="navbar__dropdown--link">canon</a>
+              <a href="" class="navbar__dropdown--link">sony</a>
+              <a href="" class="navbar__dropdown--link">nikon</a>
+              <a href="" class="navbar__dropdown--link">fuji</a>
+          </li>
+          </button>
+          <button class = "navbar__dropdown--btn">speakers <span>🔻</span>
+            <li class="navbar__dropdown--list speakers">
+              <a href="" class="navbar__dropdown--link">active</a>
+              <a href="" class="navbar__dropdown--link">passive</a>
+              <a href="" class="navbar__dropdown--link">subwoofers</a>
+              <a href="" class="navbar__dropdown--link">accesories</a>
+          </li>
+          </button>
+        </div>
+      </div>
+      <div class="cont cont__4">
+        <div class="fancy-border">
+          <div class="img__bg"></div>
+          <img src="./img/avatar-doggos.png" alt="" srcset="">
+          <div class="fancy-border__text">
+            <p class="fancy-border__p">MAX <span> &</span> ARIN <br>as</p>
+            <h1 class="fancy-border__h1">BAD BOYS</h1>
+          </div>
+        </div>
+      </div>
+      <div class="cont"></div>
+      <div class="cont"></div>
+    </div>
+    <div class="main main__grid">
+      <img class = "svg svg__bg" src="./img/kresba-1.svg" alt="" srcset=""> 
+      <h1 class="header header__big uppercase padding__top--large" >find your perfect vacation</h1>
+      <div class="grid grid__x3">
+        <div class="flip-card">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__img iceland">
+                <h1>Iceland</h1>
+              </div>
+              <div class="margin__top--small">
+                <p>Golden Circle</p>
+                <p>South Shore Adventure</p>
+                <p>Northern Lights Tour</p>
+                <p>South Coast & Glacier Hiking</p>
+                <p>Volcano Tours</p>
+              </div>
+            </div>
+            <div class="flip-card__back flip-card__back--iceland ">
+              <p class = "padding__top--medium">FROM 1500€</p>
+              <button class = "flip-card__btn uppercase">show details</button>
+              <div class="flip-card__img flip-card__img--back iceland__back"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__img slovenia">
+                <h1>Slovenia</h1>
+              </div>
+              <div class="margin__top--small">
+                <p>Lake Bled</p>
+                <p>Hiking Adventure on Triglav</p>
+                <p>Piran and Trieste</p>
+                <p>Majestic Škocjan Cave</p>
+                <p>Experience Ljubljana</p>
+              </div>
+            </div>
+            <div class="flip-card__back flip-card__back--slovenia">
+              <p class = "padding__top--medium">FROM 450€</p>
+              <button class = "flip-card__btn uppercase">show details</button>
+              <div class="flip-card__img flip-card__img--back slovenia__back"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="flip-card__img austria">
+                <h1>Austria</h1>
+              </div>
+              <div class="margin__top--small">
+                <p>Bad Gastein</p>
+                <p>Hiking on Grossglockner</p>
+                <p>Beauty of Alps</p>
+                <p>Vienna Christmas Markets</p>
+                <p>Ski Touring in Tirol</p>
+              </div>
+            </div>
+            <div class="flip-card__back flip-card__back--austria">
+              <p class = "padding__top--medium">FROM 590€</p>
+              <button class = "flip-card__btn uppercase">show details</button>
+              <div class="flip-card__img flip-card__img--back austria__back"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

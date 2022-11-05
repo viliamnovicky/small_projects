@@ -1,0 +1,11 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    &__three {
+        justify-content: center;
+        gap: 2.5vw;
+    }
+
+}

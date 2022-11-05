@@ -1,0 +1,12 @@
+.grid {
+
+    display: grid;
+
+    &__x3 {
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+        width: 112rem;
+        height: 72rem;
+        justify-content: space-between;
+    }
+}

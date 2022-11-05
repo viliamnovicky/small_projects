@@ -1,0 +1,7 @@
+.svg {
+
+    &__bg {
+        width: 100%;
+        @include absolute-center
+    }
+}

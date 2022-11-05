@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .5s;
+    font-family: "open-sans", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+  }
+
+.margin__top {
+    margin-top: 2.5vw;
+
+    &--small {
+        margin-top: 2rem !important;
+    }
+
+    &--medium {
+        margin-top: 4rem !important;
+    }
+
+    &--large {
+        margin-top: 6rem  !important;
+    }
+}
+
+.margin__bottom {
+    margin-bottom: 2.5vw;
+}
+
+.padding__top {
+    padding-top: 2.5vw;
+
+    &--small {
+        padding-top: 2rem !important;
+    }
+
+    &--medium {
+        padding-top: 4rem !important;
+    }
+
+    &--large {
+        padding-top: 6rem  !important;
+    }
+}
