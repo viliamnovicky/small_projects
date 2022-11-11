@@ -52,7 +52,7 @@
 
         &:checked + &--outer .checkbox__dot--inner {
             left: 2.3rem;
-            background: black;
+            background: rgb(36, 36, 36);
         }
 
         &:checked ~ &--bg {
@@ -62,6 +62,17 @@
         &:checked ~ h1 {
             color: rgb(248, 239, 230);
         }
+
+        &:checked ~ &--bg .img {
+            transform: rotate(180deg);
+        }
     }
 
+}
+
+.img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
 }
