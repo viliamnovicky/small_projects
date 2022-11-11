@@ -196,6 +196,62 @@ html {
   font-size: 5rem;
 }
 
+.checkbox h1 {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  z-index: 1;
+  color: rgb(36, 36, 36);
+}
+.checkbox__dot {
+  visibility: hidden;
+}
+.checkbox__dot--outer {
+  width: 5rem;
+  height: 3rem;
+  background: rgb(36, 36, 36);
+  cursor: pointer;
+  border-radius: 3rem;
+  position: absolute;
+  right: 5rem;
+  top: 5rem;
+  z-index: 1;
+}
+.checkbox__dot--inner {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: rgb(248, 239, 230);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.2rem;
+}
+.checkbox__dot--bg {
+  width: 100%;
+  height: 100%;
+  background: red;
+  position: absolute;
+  border-radius: 3rem;
+  z-index: 0;
+  background: rgb(248, 239, 230);
+}
+.checkbox__dot:checked + .checkbox__dot--outer {
+  background: rgb(248, 239, 230);
+}
+.checkbox__dot:checked + .checkbox__dot--outer .checkbox__dot--inner {
+  left: 2.3rem;
+  background: black;
+}
+.checkbox__dot:checked ~ .checkbox__dot--bg {
+  background: rgb(36, 36, 36);
+}
+.checkbox__dot:checked ~ h1 {
+  color: rgb(248, 239, 230);
+}
+
 .circle {
   border-radius: 50%;
   position: absolute;
@@ -264,6 +320,10 @@ html {
 .cont__5 {
   position: relative;
   background: linear-gradient(0, #6cd0ff, #1c2e4c);
+}
+.cont__6 {
+  position: relative;
+  background: none;
 }
 
 .flip-card {
