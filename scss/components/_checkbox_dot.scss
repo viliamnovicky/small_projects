@@ -1,13 +1,21 @@
 .checkbox {
 
-    h1 {
+    .h1 {
         position: absolute;
-        left: 5rem;
-        top: 5rem;
         text-transform: uppercase;
         font-size: 3rem;
         z-index: 1;
         color: rgb(36, 36, 36);
+
+        &__mode {
+            left: 5rem;
+            top: 5rem;
+        }
+
+        &__bt {
+            left: 5rem;
+            top: 10rem;
+        }
     }
 
     &__dot {
@@ -46,13 +54,35 @@
             background: rgb(248, 239, 230);
         }
 
-        &:checked + &--outer {
+        &:checked + &--outer,
+        &:checked ~ .checkbox__option--outer {
             background: rgb(248, 239, 230);
         }
 
         &:checked + &--outer .checkbox__dot--inner {
             left: 2.3rem;
             background: rgb(36, 36, 36);
+        }
+
+        &:checked ~ .checkbox__option--outer .checkbox__option--inner {
+            background: rgb(36, 36, 36);
+        }
+
+        & ~ .checkbox__option:checked ~ .checkbox__option--outer .checkbox__option--inner {
+            background: rgb(248, 239, 230);
+        }
+
+        &:checked ~ .checkbox__option ~ .checkbox__option--outer .checkbox__option--inner {
+            background: rgb(248, 239, 230);
+        }
+
+        &:checked ~ .checkbox__option:checked ~ .checkbox__option--outer .checkbox__option--inner {
+            background: rgb(36, 36, 36);
+        }
+
+        & ~ .checkbox__option:checked ~ .img__bt {
+            filter: invert(31%) sepia(51%) saturate(3140%) hue-rotate(195deg) brightness(103%) contrast(103%);
+            opacity: 1;
         }
 
         &:checked ~ &--bg {
@@ -63,8 +93,36 @@
             color: rgb(248, 239, 230);
         }
 
+        &:checked ~ .img__bt {
+            filter: invert(100%) sepia(13%) saturate(1962%) hue-rotate(301deg) brightness(101%) contrast(94%);
+        }
+
         &:checked ~ &--bg .img {
             transform: rotate(180deg);
+        }
+    }
+
+    &__option {
+        visibility: hidden;
+
+        &--outer {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            z-index: 1;
+            background: rgb(36, 36, 36);
+            position: absolute;
+            right: 5rem;
+            top: 10rem;
+            cursor: pointer;
+        }
+
+        &--inner {
+            background: rgb(36, 36, 36);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            @include absolute-center
         }
     }
 
@@ -75,4 +133,14 @@
     width: 100%;
     height: 100%;
     top: 50%;
+
+    &__bt {
+        position: absolute;
+        z-index: 5;
+        height: 10rem;
+        top: 10.2rem;
+        left: 30rem;
+        opacity: .1;
+        filter: invert(10%) sepia(6%) saturate(16%) hue-rotate(315deg) brightness(98%) contrast(89%);
+    }
 }

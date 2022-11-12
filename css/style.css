@@ -196,14 +196,20 @@ html {
   font-size: 5rem;
 }
 
-.checkbox h1 {
+.checkbox .h1 {
   position: absolute;
-  left: 5rem;
-  top: 5rem;
   text-transform: uppercase;
   font-size: 3rem;
   z-index: 1;
   color: rgb(36, 36, 36);
+}
+.checkbox .h1__mode {
+  left: 5rem;
+  top: 5rem;
+}
+.checkbox .h1__bt {
+  left: 5rem;
+  top: 10rem;
 }
 .checkbox__dot {
   visibility: hidden;
@@ -238,12 +244,28 @@ html {
   z-index: 0;
   background: rgb(248, 239, 230);
 }
-.checkbox__dot:checked + .checkbox__dot--outer {
+.checkbox__dot:checked + .checkbox__dot--outer, .checkbox__dot:checked ~ .checkbox__option--outer {
   background: rgb(248, 239, 230);
 }
 .checkbox__dot:checked + .checkbox__dot--outer .checkbox__dot--inner {
   left: 2.3rem;
   background: rgb(36, 36, 36);
+}
+.checkbox__dot:checked ~ .checkbox__option--outer .checkbox__option--inner {
+  background: rgb(36, 36, 36);
+}
+.checkbox__dot ~ .checkbox__option:checked ~ .checkbox__option--outer .checkbox__option--inner {
+  background: rgb(248, 239, 230);
+}
+.checkbox__dot:checked ~ .checkbox__option ~ .checkbox__option--outer .checkbox__option--inner {
+  background: rgb(248, 239, 230);
+}
+.checkbox__dot:checked ~ .checkbox__option:checked ~ .checkbox__option--outer .checkbox__option--inner {
+  background: rgb(36, 36, 36);
+}
+.checkbox__dot ~ .checkbox__option:checked ~ .img__bt {
+  filter: invert(31%) sepia(51%) saturate(3140%) hue-rotate(195deg) brightness(103%) contrast(103%);
+  opacity: 1;
 }
 .checkbox__dot:checked ~ .checkbox__dot--bg {
   background: rgb(36, 36, 36);
@@ -251,8 +273,35 @@ html {
 .checkbox__dot:checked ~ h1 {
   color: rgb(248, 239, 230);
 }
+.checkbox__dot:checked ~ .img__bt {
+  filter: invert(100%) sepia(13%) saturate(1962%) hue-rotate(301deg) brightness(101%) contrast(94%);
+}
 .checkbox__dot:checked ~ .checkbox__dot--bg .img {
   transform: rotate(180deg);
+}
+.checkbox__option {
+  visibility: hidden;
+}
+.checkbox__option--outer {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  z-index: 1;
+  background: rgb(36, 36, 36);
+  position: absolute;
+  right: 5rem;
+  top: 10rem;
+  cursor: pointer;
+}
+.checkbox__option--inner {
+  background: rgb(36, 36, 36);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .img {
@@ -260,6 +309,15 @@ html {
   width: 100%;
   height: 100%;
   top: 50%;
+}
+.img__bt {
+  position: absolute;
+  z-index: 5;
+  height: 10rem;
+  top: 10.2rem;
+  left: 30rem;
+  opacity: 0.1;
+  filter: invert(10%) sepia(6%) saturate(16%) hue-rotate(315deg) brightness(98%) contrast(89%);
 }
 
 .circle {
@@ -321,7 +379,7 @@ html {
   overflow: hidden;
 }
 .cont__3 {
-  background: rgb(36, 33, 33);
+  background: rgb(73, 72, 72);
   overflow: hidden;
 }
 .cont__4 {
@@ -334,6 +392,10 @@ html {
 .cont__6 {
   position: relative;
   background: none;
+  overflow: hidden;
+}
+.cont__7 {
+  background: rgb(36, 33, 33);
   overflow: hidden;
 }
 
@@ -461,6 +523,66 @@ html {
 
 .austria__back {
   background: url(../img/austria_back.jpg) no-repeat center center/cover;
+}
+
+.gallery {
+  position: relative;
+  display: flex;
+}
+.gallery__item {
+  width: 100%;
+  height: 100%;
+}
+.gallery__checkbox {
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.gallery__checkbox:checked + .gallery__img {
+  visibility: visible;
+  opacity: 1;
+}
+.gallery__checkbox:checked ~ .gallery__thumb img {
+  border: 2px solid transparent;
+  outline: 3px solid white;
+}
+.gallery__img {
+  width: 97.6%;
+  height: auto;
+  position: absolute;
+  top: 5rem;
+  left: 1.2%;
+  visibility: hidden;
+  opacity: 0;
+  border-radius: 1rem;
+}
+.gallery__thumb {
+  transition: all 0.1s;
+  cursor: pointer;
+}
+.gallery__thumb img {
+  width: 23.5%;
+  height: auto;
+  position: absolute;
+  bottom: 5rem;
+  border-radius: 1rem;
+  transition: all 0.1s;
+}
+
+#img1 {
+  left: 1.2%;
+}
+
+#img2 {
+  left: 25.9%;
+}
+
+#img3 {
+  right: 25.9%;
+}
+
+#img4 {
+  right: 1.2%;
 }
 
 .hamburger {
