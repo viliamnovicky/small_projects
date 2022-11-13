@@ -398,6 +398,11 @@ html {
   background: rgb(36, 33, 33);
   overflow: hidden;
 }
+.cont__8 {
+  position: relative;
+  overflow: hidden;
+  background: url("../img/sidebar-bg.jpg") no-repeat center center/cover;
+}
 
 .flip-card {
   width: 32rem;
@@ -567,6 +572,7 @@ html {
   bottom: 5rem;
   border-radius: 1rem;
   transition: all 0.1s;
+  z-index: 5;
 }
 
 #img1 {
@@ -879,6 +885,91 @@ html {
   width: 60%;
 }
 
+.sidebar {
+  height: 80%;
+  width: 15%;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background: rgba(188, 234, 230, 0.4);
+  align-items: center;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  transition: all 0.2s;
+  backdrop-filter: blur(0.5rem);
+}
+.sidebar:hover {
+  width: 45%;
+  border-radius: 2rem;
+  left: 2rem;
+}
+.sidebar:hover .sidebar__item {
+  opacity: 1;
+  visibility: visible;
+}
+.sidebar:hover .sidebar__icon--show {
+  opacity: 0;
+  visibility: hidden;
+  width: 20rem;
+}
+.sidebar__item {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+.sidebar__item:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.sidebar__item:hover .sidebar__text {
+  opacity: 1;
+  visibility: visible;
+}
+.sidebar__item:hover .sidebar__icon {
+  width: 15rem;
+  left: 85%;
+  top: 75%;
+  opacity: 0.4;
+}
+.sidebar__text {
+  position: absolute;
+  font-size: 3rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  z-index: 5;
+  color: #cc5075;
+}
+.sidebar__icon {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6rem;
+  transition: all 0.2s;
+  filter: invert(6%) sepia(35%) saturate(7425%) hue-rotate(223deg) brightness(91%) contrast(96%);
+}
+.sidebar__icon--show {
+  width: 5rem;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transition: all 0.2s;
+  filter: invert(6%) sepia(35%) saturate(7425%) hue-rotate(223deg) brightness(91%) contrast(96%);
+}
+
 .grid {
   display: grid;
 }
@@ -973,6 +1064,9 @@ html {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+}
+.flex__column {
+  flex-direction: column;
 }
 .flex__three {
   justify-content: center;

@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     align-items: stretch;
 
+    &__column {
+        flex-direction: column;
+    }
+
     &__three {
         justify-content: center;
         gap: 2.5vw;

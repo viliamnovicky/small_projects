@@ -23,7 +23,6 @@
         }
     }
 
-
     &__img {
         width: 97.6%;
         height: auto;
@@ -47,6 +46,7 @@
             bottom: 5rem;
             border-radius: 1rem;
             transition: all .1s;
+            z-index: 5;
         }
     }
 }
