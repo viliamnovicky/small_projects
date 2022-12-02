@@ -1,0 +1,70 @@
+.bank-card {
+    width: 43rem;
+    height: 27rem;
+
+    &__inner {
+        background: rgb(26, 26, 26);
+        width: 100%;
+    }
+
+    &__front {
+        width: 100%;
+        background: linear-gradient(0deg, rgba(26, 26, 26, 0.5) , rgba(26, 26, 26, 0), rgba(26, 26, 26, 0), rgba(26, 26, 26, 0.5)),
+        url(../img/card-logo.png) no-repeat center center/cover;
+        border-radius: 1rem;
+    }
+
+    &__logo {
+        filter: invert(81%) sepia(74%) saturate(2339%) hue-rotate(334deg) brightness(99%) contrast(92%);
+        position: absolute;
+        right: 1rem;
+    }
+
+    &__chip {
+        width: 6rem;
+        filter: invert(100);
+        position: absolute;
+        left: 4rem;
+        top: 5rem;
+    }
+
+    &__number {
+        color: #F3BA2F;
+        background: rgba(199, 199, 199, 0.24);
+        position: absolute;
+        @include absolute-center;
+        top: 55%;
+        width: 39rem !important;
+        font-size: 3rem !important;
+        padding: .4rem 0;
+        border-radius: 1rem;
+
+        span {
+            font-size: 4rem;
+        }
+    }
+
+    &__bottom {
+        color: rgb(153, 153, 153);
+        font-size: 1.6rem;
+        display: inline-block;
+        text-align: left;
+        position: absolute;
+        left: 2rem;
+        bottom: 2rem;
+
+        span {
+            font-size: 2rem;
+            padding-top: .5rem;
+            display: block;
+            color: white;
+            font-weight: 100;
+        }
+
+        &--expiration {
+            left: auto;
+            right: 2rem;
+            text-align: right;
+        }
+    }
+}
