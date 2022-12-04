@@ -593,6 +593,52 @@ html {
   right: 2rem;
   text-align: right;
 }
+.bank-card__back {
+  position: relative;
+  overflow: hidden;
+}
+.bank-card__back--bg {
+  display: block;
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  left: 6rem;
+  bottom: 0;
+  transform: translateY(15%);
+  background: url(../img/card-logo.png) no-repeat center center/cover;
+  opacity: 0.2;
+}
+.bank-card__black {
+  display: block;
+  width: 100%;
+  height: 5rem;
+  background: rgba(14, 14, 14, 0.8);
+  position: absolute;
+  top: 2rem;
+}
+.bank-card__signature {
+  display: block;
+  width: 90%;
+  background: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  font-size: 2rem;
+  padding: 1.5rem 1.2rem 1.5rem 0;
+}
+.bank-card__signature::after {
+  content: "CVV";
+  text-align: right;
+  padding-right: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: -3rem;
+  right: 0;
+}
 
 .gallery {
   position: relative;
